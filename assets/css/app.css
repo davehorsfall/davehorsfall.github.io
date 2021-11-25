@@ -226,6 +226,7 @@ small {
     font-weight: 700
 }
 .cell .meta {  
+    font-weight: normal;
     font-size: 0.9em
 }
 @media screen and (max-width: 580px) {
