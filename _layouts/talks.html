@@ -1,0 +1,82 @@
+---
+layout: default
+---
+<h2>Mental Health Talks</h2>
+<p>Throughout 2022, I will run free mental health talks on Zoom. The session lasts 1 hour, and explores common stressors for software engineers and data scientists 
+working in research, and gives people an opportunity to answer questions anonymously. The aim is to raise awareness of mental health in the workplace, 
+and reduce the stigma of starting conversations about how we are feeling.</p>
+
+<p>Organisations and individuals can register to join.</p>
+<div class="table">
+  <div class="row header blue">
+    <div class="cell">
+      Location
+    </div>
+    <div class="cell">
+      Title
+    </div>
+    <div class="cell">
+      Date
+    </div>
+    <div class="cell">&nbsp;</div>
+  </div>
+  {% assign talks = site.data.schedule %}
+  {% for talk in talks %}
+  <div class="row">
+    <div class="cell" data-title="Location">
+      {{ talk.Location }}
+      {% if talk.Places %}
+        <div class="meta">{{ talk.Places }} places</div>
+      {% endif %} 
+    </div>
+    <div class="cell" data-title="Title">
+      {{ talk.Title }}
+    </div>
+    <div class="cell" data-title="Date">
+      {{ talk.Date }}
+      {% if talk.Time %}
+        <div class="meta">{{ talk.Time }}</div>
+      {% endif %}          
+    </div>
+    <div class="cell" data-title="Registration">
+      {% if talk.Registration %}
+        <a class="button-4" href="{{ talk.Registration }}">Register</a>
+      {% else %}
+        <button class="button-4" disabled="disabled">Closed</button>
+      {% endif %}
+    </div>
+  </div>
+  {% endfor %}
+</div>
+<h2>Previous Sessions</h2>
+<div class="table">
+  <div class="row header blue">
+    <div class="cell">
+      Organisation
+    </div>
+    <div class="cell">
+      Title
+    </div>
+    <div class="cell">
+      Date
+    </div>
+  </div>
+  {% assign talks = site.data.talks | sort: "Date" | reverse %}
+  {% for talk in talks %}
+  <div class="row">
+    <div class="cell" data-title="Organisation">
+      {{ talk.Organisation }}
+      {% if talk.Group %}
+        <div class="meta">{{ talk.Group }}</div>
+      {% endif %}
+    </div>
+    <div class="cell" data-title="Title">
+      {{ talk.Title }}
+    </div>
+    <div class="cell" data-title="Date">
+      {{ talk.Date }}
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
