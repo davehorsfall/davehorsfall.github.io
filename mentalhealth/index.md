@@ -18,15 +18,15 @@ I've developed an interactive presentation on mental health for people working i
   <span class="quote-position">Programme Director, Alan Turing Institute</span>
 </blockquote>
 
-The presentation can include the following discussions:
+The presentation includes the following discussions:
 * What is mental health?
-* The problem of stigma around mental health
-* Motivation for the discussion, including mental health statistics from wider academia
+* The problem of stigma
+* Motivation for the discussion, including statistics from academia
 * Common mental health stressors when working in research
 * Preventative measures and self-care
-* Discussion of mental health conditions such as anxiety, depression and burnout
-* Advice on how to access help and support 
-* How to talk about mental health with your supervisor
+* Description of conditions such as anxiety, depression and burnout
+* The importance of accessing help and support 
+* Advice on how to talk about mental health with your supervisor
 
 I'm running my interactive presentation on mental health over Zoom. It is free for organisations and individuals to <a href="{% link mentalhealth/talks.md %}">register</a>.
 
